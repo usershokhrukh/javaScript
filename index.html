@@ -6,12 +6,29 @@
   <title>JavaScript_day-1</title>
 </head>
   <style>
+    body {
+      background-color: rgb(18, 18, 63);
+    }
 
     .box {
-      display: grid;
-      grid-row: 30px 30px 30px;
-      grid-template-columns: repeat(5, 200px);
-      justify-content: center;
+      position: relative;
+      width: 50%;
+      margin: auto;
+      height: 400px;
+      border-radius: 5px;
+      background-color: rgb(64, 52, 118) !important;
+    }
+    
+    
+    .text {
+      font-size: 25px;
+      color: white;
+    }
+
+    .text span {
+      animation-name: slash;
+      animation-duration: 0.7s !important;
+      animation-iteration-count: infinite;
     }
 
     .right {
@@ -24,19 +41,18 @@
 
     }
 
-    @keyframes right {
-      40% {
-        transform: translateX(100%);
-        transform: scale(1.2);
-      } 100% {
-        transform: translateX(-30px);
-        transform: scale(1);
+    @keyframes slash {
+      20% {
+        opacity: 0;
       }
     }
   </style>
 <body>
   <div class="box">
-    <svg class="right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.99974 13.0001L1.9996 11.0002L18.1715 11.0002L14.2218 7.05044L15.636 5.63623L22 12.0002L15.636 18.3642L14.2218 16.9499L18.1716 13.0002L1.99974 13.0001Z"></path></svg>
+    <p class="text">
+      ~<span>/</span>  
+    </p>
+    
   </div>
   
 
