@@ -51,7 +51,6 @@
 //             userRegion.toLowerCase(). padStart(theMaxLength + 4, " ")
 // );
 
-
 // //trim & trimEnd & trimStart
 // console.log("not trimmed:" + '  trim  ' + "<-");
 // console.log("trimmed:" + '  trim  '.trim() + "<-");
@@ -85,7 +84,7 @@
 // console.log("which last index has the 'n' in 'banana'? =>" + "banana".lastIndexOf('n'));
 // console.log("which last index has the 'p' in 'apple'? =>" + "apple".lastIndexOf('p'));
 
-// //slice 
+// //slice
 // console.log("give me slice of banana => " + "banana".slice(0, 4));
 // console.log("Jamshid after sliced => " + "Jamshid".slice(0, -4));
 // console.log("I put my laptop on ? of the box => " + "laptop".slice(3));
@@ -94,10 +93,9 @@
 // console.log("it is method with substring => " + "method".substring(0,4));
 // console.log("substr is old method, slice is new method => " + "substr".substring(0, 5));
 
-// //concat 
+// //concat
 // console.log("ha, after concat 'ha' => " + 'ha'.concat("ha", "ha", "ha"));
 // console.log("ba, before concat, but after adding 'na' => " + "ba".concat("na", "na"));
-
 
 // //split
 // console.log("Hello will split soon => " + "Hello".split(''));
@@ -105,14 +103,12 @@
 // console.log("I, love, programming => " + "I, love, programming".split(',') + " (index 0 will be) " + "I, love, programming".split(',')[0]);
 // console.log("99-000-79-53 => " + "99-000-79-53".split('-'));
 
-
 // //charAt & charCodeAt & at
 // console.log("there is charAt => " + 'char'.charAt(0) + " in 'char'");
 // console.log("the a's unicode will be ?, for example 'apple'" + 'apple'.charCodeAt(0));
 // console.log("the p's unicode will be ?, for example 'pineapple'" + 'pineapple'.charCodeAt(0));
 // console.log("the p's unicode will be ?, for example 'pineapple'" + 'pineapple'.charCodeAt(0));
 // console.log("in index of -3, exist '" + 'GitHub'.at(-3) + "', in GitHub");
-
 
 // //search
 // console.log("search first indexof 'yyyy' in \"Today's year 2025, after two months it will be 2026\" (next line)");
@@ -124,9 +120,7 @@
 // console.log("Today's year 2025 of November, after two months it will be 2026 of January".match(/\d{4} of January|November/g));
 
 // var matchAllList = [...("1-qator\n2-qator\n3-qator".matchAll(/(\d)-qator/mgi))];
-// console.log("1-qator\n2-qator\n3-qator to matchAll => " + matchAllList);      
-
-
+// console.log("1-qator\n2-qator\n3-qator to matchAll => " + matchAllList);
 
 // //localeCompare
 // console.log("a harifini b harifiga ket-ma ketligini tekshirish, a oldinroqmi?: " + 'a'.localeCompare('b'));
@@ -134,11 +128,9 @@
 // console.log("Salam ni salam ga, Salam oldinroqmi?: " + 'Salam'.localeCompare('salam'));
 // console.log("abc ni abc ga, abc oldinroqmi?: " + 'abc'.localeCompare('abc'));
 
-
 // //codePointAt
 // console.log("中 ni unicode ni tekshirish " + "中".codePointAt());
 // console.log("中 ni unicode ni tekshirish " + "中".codePointAt());
-
 
 // //isWellFormed
 // console.log("-> \uDE00 bu well formatmi? " + "bu well formatmi? \uDE00".isWellFormed());
@@ -147,24 +139,33 @@
 // // notice to user
 // alert("String methods, console da!");
 
-
-
-
-
 const userBall = +prompt("Iltimos ballingizni kiriting: ");
 
 if (userBall >= 0 && userBall <= 180) {
   if (userBall >= 0 && userBall < 80) {
     alert("oqishga kira olmadingiz");
-  }else if (userBall >= 80 && userBall < 100) {
-    const userMoney = +prompt("siz super-kontrakt asosida o'qishga tavsiya qilindingiz kontrakt miqdori yiliga 3000 $,\n qancha pulingiz bor?: ")
-  }else if (userBall >= 100 && userBall < 130) {
-    const userMoney = +prompt("siz kontrakt asosida qabul qilindizngiz, kontrakt miqdori yiliga 2000$ \n qancha pulingiz bor")
-  }else {
+  } else if (userBall >= 80 && userBall < 100) {
+    const userMoney = +prompt(
+      "siz super-kontrakt asosida o'qishga tavsiya qilindingiz kontrakt miqdori yiliga 3000 $,\n qancha pulingiz bor?: "
+    );
+  } else if (userBall >= 100 && userBall < 130) {
+    const userMoney = +prompt(
+      "siz kontrakt asosida qabul qilindizngiz, kontrakt miqdori yiliga 2000$ \n qancha pulingiz bor"
+    );
+  } else {
     alert("grant asosida o'qishga qabul qilindi");
   }
-}else {
-  alert("ball kiritilmadi!!")
+} else {
+  alert("ball kiritilmadi!!");
 }
 
-
+const userFizz = +prompt("Son kiriting (Fizz Buzz): ");
+if (userFizz % 3 == 0 && userFizz % 5 == 0) {
+  alert("FizzBuzz");
+} else if (userFizz % 5 == 0) {
+  alert("Buzz");
+} else if (userFizz % 3 == 0) {
+  alert("Fizz");
+}else {
+  alert(`${userFizz}`);
+}
